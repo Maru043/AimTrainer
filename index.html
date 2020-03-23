@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  </head>
+  <body>
+    <div class="startScene">
+      <div class="startSceneWrapper">
+        <p class="currentWindowSize">
+          現在のウィンドウサイズ:幅<span class="currentWidth"></span>px
+          高さ<span class="currentHeight"></span>px
+        </p>
+        <button class="setWindowSizeBtn">
+          現在のウィンドウサイズに合わせる</button
+        ><br />
+        <label>
+          幅<input
+            class="setWidth"
+            type="number"
+            step="100"
+            min="500"
+            value="500"
+        /></label>
+        <label
+          >高さ<input
+            class="setHeight"
+            type="number"
+            step="100"
+            min="500"
+            value="500"
+        /></label>
+        <br />
+        <label
+          >制限時間(s)<input
+            class="setTimelimit"
+            min="10"
+            type="number"
+            step="1"
+            value="30"
+        /></label>
+        <br />
+        <label
+          >直径(px)<input type="number" class="setDiameter" value="87"
+        /></label>
+        <br />
+        <button class="startBtn">Start</button>
+        <p class="sourceSite">
+          音源:
+          <a
+            href="https://maoudamashii.jokersounds.com/"
+            title="フリー音楽素材/魔王魂"
+            target="_blank"
+            >フリー音楽素材/魔王魂</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <div class="playScene">
+      <div class="playSceneBackground">
+        <p class="timer"></p>
+        <p class="gainedPoint"></p>
+        <div class="currentScores">
+          Shots:<span class="totalShots"></span><br />
+          Great:<span class="greatShots"></span>(<span
+            class="greatPercentage"
+          ></span
+          >%)<br />
+          Good:<span class="goodShots"></span>(<span
+            class="goodPercentage"
+          ></span
+          >%)<br />
+          Hit:<span class="hitShots"></span><br />
+          Accuracy:<span class="accuracy"></span>%<br />
+          Score:<span class="totalScore"></span><br />
+        </div>
+      </div>
+      <div class="target">
+        <div class="targetOuter"></div>
+        <div class="targetInner"></div>
+      </div>
+    </div>
+
+    <div class="resultScene">
+      <div class="resultSceneWrapper">
+        <h2>Result</h2>
+        <div class="resultScores">
+          Shots:<span class="totalShots"></span><br />
+          Great:<span class="greatShots"></span>(<span
+            class="greatPercentage"
+          ></span
+          >%)<br />
+          Good:<span class="goodShots"></span>(<span
+            class="goodPercentage"
+          ></span
+          >%)<br />
+          Hit:<span class="hitShots"></span><br />
+          Accuracy:<span class="accuracy"></span>%<br />
+          Score:<span class="totalScore"></span><br />
+        </div>
+        <label>
+          <input type="checkbox" checked class="showAvgBullethole" />
+          弾痕の平均を表示
+        </label>
+        <div class="showBulletholes">
+          <div class="showBulletholesOuter"></div>
+          <div class="showBulletholesInner"></div>
+        </div>
+        <div class="buttonsWrapper">
+          <button class="retryBtn">Retry</button>
+          <button class="backToStartSceneBtn">Main Menu</button>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
