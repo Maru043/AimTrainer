@@ -226,8 +226,10 @@ function setDisplayValue(
 }
 
 function playSE(_soundSrc) {
-  const SE = new Audio(_soundSrc);
-  SE.play();
+  if (document.querySelector(".enableSE").checked) {
+    const SE = new Audio(_soundSrc);
+    SE.play();
+  }
 }
 
 function moveTarget() {
