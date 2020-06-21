@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>AimTrainer - Challenge</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  </head>
+  <body>
+    <div class="startScene">
+      <div class="startSceneWrapper">
+        <label
+          ><input type="checkbox" class="enableSE" checked />SoundEffect</label
+        >
+        <br />
+        <button class="startBtn">Start</button><br><br>
+        <a class="toTraining"><button>Training Mode</button></a>
+        <p class="sourceSite">
+          音源:
+          <a
+            href="https://maoudamashii.jokersounds.com/"
+            title="フリー音楽素材/魔王魂"
+            target="_blank"
+            >フリー音楽素材/魔王魂</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <div class="playScene">
+      <div class="playSceneBackground">
+        <p class="timer">30</p>
+        <div class="currentScores">
+          <p>Hits:<span class="hits">0</span></p>
+          <p>
+            Accuracy:<span class="hits">0</span>/<span class="totalShots"
+              >0</span
+            >(
+              <span class="accuracy"></span>%) <p>Score:<span class="score"
+              >0</span
+            ></p>
+          </p>
+        </div>
+      </div>
+      <div class="target"></div>
+    </div>
+
+    <div class="resultScene">
+      <div class="resultSceneWrapper">
+        <h2>Result</h2>
+        <div class="resultScores">
+          <p>Hits:<span class="hits">0</span></p>
+          <p>Accuracy:<span class="hits">0</span>/<span class="totalShots">0</span>(<span class="accuracy"></span>%) </p>
+              <p>Score:<span class="score">0</span></p>
+        </div>
+        <label>
+          <input type="checkbox" checked class="toggleAvgBullethole" />
+          弾痕の平均を表示
+        </label><br>
+        <input type="text" class="userName" maxlength="15" size="20" placeholder="input your name" ><br>
+        <button type="submit" class="submitBtn">Submit</button><br>
+        <button type="button" class="getRankingBtn">Ranking</button>
+        <div class="leaderBoard">
+          <ul class="columnName"><li>Rank</li><li>Name</li><li>Score</li><li>Acc</li></ul>
+        </div>
+        <div class="showBulletholes"></div>
+        <div class="buttonsWrapper">
+          <button class="retryBtn">Retry</button>
+          <button class="backToStartSceneBtn">Main Menu</button>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
