@@ -39,7 +39,7 @@
 
   document
     .querySelector(".toTraining")
-    .setAttribute("href", `http://${location.host}/aimtrainer/training/`);
+    .setAttribute("href", `http://${location.host}/training/`);
 
   document.querySelector(".startBtn").addEventListener("click", function () {
     initialize();
@@ -83,38 +83,30 @@
   function initialize() {
     avgPosXOfShot = 0;
     avgPosYOfShot = 0;
-
     clearInterval(countDownIntervalId);
     timelimit = 30;
     timer.innerHTML = timelimit;
-
     target.setAttribute("style", `top:50%;left:50%;`);
     $target.off("mousedown");
     $target.one("mousedown", function () {
       countDownTimer();
     });
-
     submitBtn.addEventListener("click", putData, { once: true });
     document
       .querySelector(".getRankingBtn")
       .addEventListener("click", getRanking, { once: true });
-
     while (document.querySelector(".bullethole") !== null) {
       document.querySelector(".bullethole").remove();
     }
-
     while (document.querySelector(".record") !== null) {
       document.querySelector(".record").remove();
     }
-
     if (document.querySelector(".avgBullethole") !== null) {
       document.querySelector(".avgBullethole").remove();
     }
-
     for (let key in scores) {
       scores[key] = 0;
     }
-
     updateScores();
   }
 
@@ -222,11 +214,14 @@
   }
 
   function getRanking() {
+    let records;
+
     fetch(`http://${location.host}/challenge/getRanking/`)
       .then(function (response) {
         return response.json();
       })
       .then(function (records) {
+        console.log(records);
         for (let i = 0; i < records.Records.length; i++) {
           const record = records.Records[i];
           const ul = document.createElement("ul");
