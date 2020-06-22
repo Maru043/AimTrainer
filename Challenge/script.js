@@ -39,7 +39,7 @@
 
   document
     .querySelector(".toTraining")
-    .setAttribute("href", `http://${location.host}/aimtrainer/training/`);
+    .setAttribute("href", `http://${location.host}/training/`);
 
   document.querySelector(".startBtn").addEventListener("click", function () {
     initialize();
